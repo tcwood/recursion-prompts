@@ -197,7 +197,7 @@
       });
 
       it('should return the sum of an array of negative integers', function() {
-        expect(sumBelow(-1)).to.eql(0);
+        expect(sumBelow(-1)).to.equal(0);
         expect(sumBelow(-2)).to.eql(-1);
         expect(sumBelow(-6)).to.eql(-15);
         expect(sumBelow(-21)).to.eql(-210);
