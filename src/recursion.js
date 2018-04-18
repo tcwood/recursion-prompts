@@ -33,11 +33,14 @@ var arraySum = function([head, ...tail]) {
   return Array.isArray(head) ? arraySum(head) + arraySum(tail) : head + arraySum(tail);
 };
 
-console.log(arraySum([[1],[2,3],[[4]],5,6]));
-
 // 4. Check if a number is even.
 var isEven = function(n) {
+  if (n === 0) return true;
+  else if (n > 0 && n < 2) return false;
+  else if (n < 0) return isEven(-1 * n);
+  return isEven(n - 2);
 };
+
 
 // 5. Sum all integers below a given integer.
 // sumBelow(10); // 45
