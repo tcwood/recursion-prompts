@@ -223,7 +223,6 @@
       });
 
       it('should return the integers between two numbers', function() {
-        debugger;
         expect(range(3,8)).to.eql([4,5,6,7]);
         expect(range(127,131)).to.eql([128,129,130]);
       });
