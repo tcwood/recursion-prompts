@@ -108,6 +108,21 @@ var reverse = function(string) {
 
 // 10. Write a function that determines if a string is a palindrome.
 var palindrome = function(string) {
+  const firstLetter = string[0];
+  const lastLetter = string[string.length - 1];
+  console.log('length', string.length)
+  console.log('string:',string) 
+  if (string.length <=1 ||!string) {
+    return true;
+  } else if (firstLetter === ' ') {
+    return palindrome(string.slice(1));
+  } else if (lastLetter === ' ') {
+    return palindrome(0, string.length - 1);
+  } else if (firstLetter.toLowerCase() === lastLetter.toLowerCase()) {
+    let newString = string.slice(1, string.length - 1);
+    return palindrome(newString);
+  }
+  return false;
 };
 
 // 11. Write a function that returns the remainder of x divided by y without using the
